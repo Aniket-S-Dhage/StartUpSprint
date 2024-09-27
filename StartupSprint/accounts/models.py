@@ -14,7 +14,7 @@ class User(AbstractUser):
         ('loan_representative', 'loan_representative'),
         ('loan_sanctioning_officer', 'loan_sanctioning_officer'),
         ('admin', 'admin'),
-        ('account_head', 'count_head')
+        ('account_head', 'account_head')
     ]
 
     username = None

@@ -13,7 +13,7 @@ class Enquiry (models.Model):
     mobile = PhoneNumberField(region='IN')
     message = models.TextField()
     enquiry_date = models.DateTimeField(auto_now_add=True, blank=True, null=True, editable=False)
-    status = models.CharField(max_length=10, choices=ENQUIRY_STATUS)
+    status = models.CharField(max_length=10, choices=ENQUIRY_STATUS, default='pending')
     response_timestamp = models.DateTimeField(blank=True, null=True)
 
 
@@ -43,7 +43,7 @@ class Family(models.Model):
 class Bank(models.Model):
     user = models.ForeignKey('accounts.User', on_delete=models.CASCADE, related_name='banks')
     bank_name = models.CharField(max_length=30, default='', blank=True, null=True)
-    account_number = models.CharField(max_length=20, default='', blank=True, null=True),
+    account_number = models.CharField(max_length=20, default='', blank=True, null=True)
     ifsc_code=models.CharField(max_length=20, blank=True, default='')
     passbook_copy = models.ImageField(upload_to='customer/bank/', blank=True, null=True)
     bank_address = models.TextField(blank=True, null=True)

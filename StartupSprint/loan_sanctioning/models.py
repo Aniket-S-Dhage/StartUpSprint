@@ -30,7 +30,7 @@ class Vendor(models.Model):
     email = models.EmailField(default=0, blank=True)
     address = models.TextField(max_length=25, default=0, blank=True)
     city = models.CharField(max_length=250, default=0, blank=True)
-    state = models.CharField(max_length=250, default=0, blank=True)
+    state = models.CharField(max_length=250, default=0, blank=True)    #quilio otp verification exeption handling 
     country = models.CharField(max_length=250, default=0, blank=True)
     pin_code = models.IntegerField(default=0, blank=True) 
     mobile = models.CharField(max_length=10, default=0, blank=True)
